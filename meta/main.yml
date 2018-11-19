@@ -1,0 +1,23 @@
+galaxy_info:
+  role_name: log-management
+  author: Eugene Ignatov
+  description: configure rsyslog for log management services
+  company: Cimon.io
+
+  license: MIT
+
+  min_ansible_version: 2.4.0
+
+  platforms:
+    - name: Ubuntu
+      versions:
+      - all
+    - name: Debian
+      versions:
+      - all
+
+  galaxy_tags:
+    - log
+    - log-management
+
+dependencies: []

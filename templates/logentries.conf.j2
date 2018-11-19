@@ -1,0 +1,4 @@
+# {{ ansible_managed }}
+
+$template Logentries,"{{ logentries_token }} %HOSTNAME% %syslogtag%%msg%\n"
+*.*    @@{{ logentries_host }}:{{ logentries_port }};Logentries
