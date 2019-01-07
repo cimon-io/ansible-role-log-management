@@ -1,18 +1,18 @@
 ---
-logentries_host: ''
+logentries_host: ""
 logentries_port: 80
-logentries_token: ''
-logentries_conf_name: '10-logentries.conf'
+logentries_token: ""
+logentries_conf_name: "10-logentries.conf"
 
 #---
 
-logzio_host: 'listener.logz.io'
+logzio_host: "listener.logz.io"
 logzio_port: 5000
-logzio_token: ''
-logzio_conf_name: '10-logzio.conf'
+logzio_token: ""
+logzio_conf_name: "10-logzio.conf"
 
 #---
 
-papertrail_host: ''
-papertrail_port: ''
-papertrail_conf_name: '10-papertrail.conf'
+papertrail_host: ""
+papertrail_port: ""
+papertrail_conf_name: "10-papertrail.conf"

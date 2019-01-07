@@ -1,36 +1,36 @@
 ---
-- name: 'configure rsyslog - logentries'
+- name: "configure rsyslog - logentries"
   template:
-    src: 'logentries.conf.j2'
-    dest: '/etc/rsyslog.d/{{ logentries_conf_name }}'
+    src: "logentries.conf.j2"
+    dest: "/etc/rsyslog.d/{{ logentries_conf_name }}"
     owner: root
     group: root
     mode: 0644
   when: logentries_token | length > 0
-  notify: 'restart rsyslog'
+  notify: "restart rsyslog"
   tags:
     - log-management
 
-- name: 'configure rsyslog - logz.io'
+- name: "configure rsyslog - logz.io"
   template:
-    src: 'logzio.conf.j2'
-    dest: '/etc/rsyslog.d/{{ logzio_conf_name }}'
+    src: "logzio.conf.j2"
+    dest: "/etc/rsyslog.d/{{ logzio_conf_name }}"
     owner: root
     group: root
     mode: 0644
   when: logzio_token | length > 0
-  notify: 'restart rsyslog'
+  notify: "restart rsyslog"
   tags:
     - log-management
 
-- name: 'configure rsyslog - papertrail'
+- name: "configure rsyslog - papertrail"
   template:
-    src: 'papertrail.conf.j2'
-    dest: '/etc/rsyslog.d/{{ papertrail_conf_name }}'
+    src: "papertrail.conf.j2"
+    dest: "/etc/rsyslog.d/{{ papertrail_conf_name }}"
     owner: root
     group: root
     mode: 0644
   when: papertrail_host | length > 0
-  notify: 'restart rsyslog'
+  notify: "restart rsyslog"
   tags:
     - log-management
