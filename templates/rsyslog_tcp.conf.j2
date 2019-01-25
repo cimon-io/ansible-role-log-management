@@ -1,0 +1,4 @@
+# {{ ansible_managed }}
+
+$template ForwardFormat,"<%PRI%>%TIMESTAMP:::date-rfc3339% {{ inventory_hostname }} %syslogtag:1:32%%msg:::sp-if-no-1st-sp%%msg%"
+*.*    @@{{ rsyslog_tcp_host }}:{{ rsyslog_tcp_port }};ForwardFormat

@@ -1,4 +1,4 @@
 # {{ ansible_managed }}
 
-$template logzioFormat,"[{{ logzio_token }}] <%pri%>%protocol-version% %timestamp:::date-rfc3339% %HOSTNAME% %app-name% %procid% %msgid% [type=syslog] %msg%\n"
+$template logzioFormat,"[{{ logzio_token }}] <%pri%>%protocol-version% %timestamp:::date-rfc3339% {{ inventory_hostname }} %app-name% %procid% %msgid% [type=syslog] %msg%\n"
 *.*    @@{{ logzio_host }}:{{ logzio_port }};logzioFormat
