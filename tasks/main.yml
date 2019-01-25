@@ -34,3 +34,15 @@
   notify: "restart rsyslog"
   tags:
     - log-management
+
+- name: "configure rsyslog - simple tcp"
+  template:
+    src: "rsyslog_tcp.conf.j2"
+    dest: "/etc/rsyslog.d/{{ rsyslog_conf_name }}"
+    owner: root
+    group: root
+    mode: 0644
+  when: rsyslog_tcp_host | length > 0
+  notify: "restart rsyslog"
+  tags:
+    - log-management

@@ -16,3 +16,9 @@ logzio_conf_name: "10-logzio.conf"
 papertrail_host: ""
 papertrail_port: ""
 papertrail_conf_name: "10-papertrail.conf"
+
+#---
+
+rsyslog_tcp_host: ""
+rsyslog_tcp_port: ""
+rsyslog_conf_name: "10-simple-rsyslog-tcp.conf"
