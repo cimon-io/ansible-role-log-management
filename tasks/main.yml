@@ -46,3 +46,15 @@
   notify: "restart rsyslog"
   tags:
     - log-management
+
+- name: "configure rsyslog - nginx"
+  template:
+    src: "nginx.conf.j2"
+    dest: "/etc/rsyslog.d/{{ rsyslog_nginx_conf_name }}"
+    owner: root
+    group: root
+    mode: 0644
+  when: rsyslog_nginx_tcp_host | length > 0
+  notify: "restart rsyslog"
+  tags:
+    - log-management

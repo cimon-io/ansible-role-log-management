@@ -1,0 +1,10 @@
+# {{ ansible_managed }}
+
+$ModLoad imfile
+$InputFileName {{ rsyslog_nginx_access_log_path }}
+$InputFileTag nginx
+$InputFileFacility local7
+$InputRunFileMonitor
+
+$template NginxFormat,"<%PRI%>%TIMESTAMP:::date-rfc3339% {{ inventory_hostname }} %syslogtag:1:32%%msg:::sp-if-no-1st-sp%%msg%"
+local7.*    @@{{ rsyslog_nginx_tcp_host }}:{{ rsyslog_nginx_tcp_port }};NginxFormat

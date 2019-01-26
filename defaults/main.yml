@@ -22,3 +22,10 @@ papertrail_conf_name: "10-papertrail.conf"
 rsyslog_tcp_host: ""
 rsyslog_tcp_port: ""
 rsyslog_conf_name: "10-simple-rsyslog-tcp.conf"
+
+#---
+
+rsyslog_nginx_access_log_path: "/var/log/nginx/access.log"
+rsyslog_nginx_tcp_host: ""
+rsyslog_nginx_tcp_port: ""
+rsyslog_nginx_conf_name: "10-nginx.conf"
